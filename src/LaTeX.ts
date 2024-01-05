@@ -88,8 +88,8 @@ export async function tex2dataURL(
         svg.width.baseVal.valueAsString = `${(svg.width.baseVal.valueInSpecifiedUnits+1).toFixed(3)}ex`;
       }
       const img = svgToBase64(svg.outerHTML);
-      svg.width.baseVal.valueAsString = (svg.width.baseVal.valueInSpecifiedUnits * 10).toFixed(3);
-      svg.height.baseVal.valueAsString = (svg.height.baseVal.valueInSpecifiedUnits * 10).toFixed(3);
+      svg.width.baseVal.valueAsString = (svg.width.baseVal.valueInSpecifiedUnits * 100).toFixed(3);
+      svg.height.baseVal.valueAsString = (svg.height.baseVal.valueInSpecifiedUnits * 100).toFixed(3);
       const dataURL = svgToBase64(svg.outerHTML);
       return {
         mimeType: "image/svg+xml",
